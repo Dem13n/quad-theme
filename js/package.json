@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@dem13n/quad-theme",
+  "dependencies": {
+    "flarum-webpack-config": "0.1.0-beta.10",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "dem13n/quad-theme",
+    "description": "Quad theme for flarum",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dem13n",
+            "email": "idem13n@gmail.com"
+        }
+    ],
+    "require": {
+        "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dem13n\\Quad\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Quad Theme",
+            "icon": {
+                "name": "fas fa-dice-d6",
+                "backgroundColor": "#518BDA",
+                "color": "#fff"
+            }
+        }
+    }
+}

@@ -1,0 +1,220 @@
+  @header-bg: @body-bg;
+  @header-color: @primary-color;
+  @header-control-bg: @control-bg;
+  @header-control-color: @control-color;
+  @muted-light: hsl(@primary-hue, min(20%, @primary-sat), 70%);
+  @hs-10-10: hsl(@primary-hue, min(10%, @primary-sat), 10%);
+  @hs-20-10: hsl(@primary-hue, min(20%, @primary-sat), 10%);
+  @hs-20-15: hsl(@primary-hue, min(20%, @primary-sat), 15%);
+  @hs-20-20: hsl(@primary-hue, min(20%, @primary-sat), 20%);
+  @hs-20-25: hsl(@primary-hue, min(20%, @primary-sat), 25%);
+  @hs-30-15: hsl(@primary-hue, min(30%, @primary-sat), 15%);
+  @hs-30-25: hsl(@primary-hue, min(30%, @primary-sat), 25%);
+  @mix-black-100: mix(#000, @primary-color, 100%);
+  @mix-black-90: mix(#000, @primary-color, 90%);
+  body {
+       &.dark, &.night-mode {
+          background: @hs-20-10;
+          .is-outer {
+              -webkit-box-shadow: 0px 0px 10px @mix-black-100;
+              -moz-box-shadow: 0px 0px 10px @mix-black-100;
+              box-shadow: 0px 0px 10px @mix-black-100;
+          }
+          #app {
+              background: @hs-20-15;
+              &:before {
+                  border-bottom: 1px solid @hs-30-25;
+                  background: @hs-20-15;
+              }
+              .App-content {
+                  background: @hs-20-15;
+              }
+              .Avatar {
+                  filter: brightness(110%);
+              }
+          }
+          .Modal-body {
+              color: @muted-light;
+          }
+          button {
+              &.Button.Group {
+                  .Button--color(@muted-light, @control-bg);
+              }
+              &.Button {
+                  .Button--color(@muted-light, @hs-10-10);
+              }
+              &.Button--primary {
+                  .Button--color(@body-bg, @primary-color);
+                  color: #fff;
+                  mix-blend-mode: difference;
+              }
+          }
+          .Dropdown-toggle.Button:not(.Button--primary) {
+              &.Button--flat {
+                  background: transparent;
+              }
+              background: @hs-10-10;
+              &:hover, &:active, &:focus {
+                  background: @mix-black-90;
+              }
+          }
+          .NotificationList-header h4, .NotificationList-empty, .Notification {
+              color: @muted-light !important;
+          }
+          .PostUser h3 a>span.username {
+              filter: brightness(1.5);
+              mix-blend-mode: screen;
+              font-size: 16px;
+          }
+          .DiscussionHero .TagsLabel .TagLabel.colored {
+              margin-right: 5px;
+              background: @mix-black-90 !important;
+          }
+          .PostsUserPage a {
+              color: @muted-light;
+          }
+          .TagLabel.colored span.TagLabel-text {
+              color: #fff !important;
+              font-weight: normal;
+          }
+          .FlagPostModal {
+              .checkbox strong {
+                  color: @muted-light;
+              }
+          }
+          .PostStream, .PostStream a {
+              color: @muted-light;
+          }
+          .PostStream-timeGap span {
+              color: @muted-light;
+          }
+          .Dropdown {
+              .Dropdown-menu {
+                  >li {
+                      >a {
+                          color: @muted-light;
+                      }
+                  }
+              }
+          }
+          a.PostMention, a.UserMention {
+              background: @mix-black-90;
+          }
+          .open .Dropdown-menu {
+              background: @mix-black-90;
+              >li {
+                  >a, >button, >span {
+                      color: @muted-light;
+                      background: @mix-black-90;
+                  }
+                  >a, >button {
+                      &:hover {
+                          background: @hs-30-15;
+                      }
+                  }
+                  &.active {
+                      >a, >button {
+                          background: @hs-30-15;
+                      }
+                  }
+              }
+          }
+          .DiscussionList {
+              .DiscussionListItem {
+                  &:hover {
+                      background: @hs-20-10;
+                  }
+                  &.active {
+                      background: @hs-20-15;
+                  }
+              }
+              :not(.DiscussionList--searchResults) .read .DiscussionListItem-title, .DiscussionListItem-title {
+                  color: @muted-light;
+              }
+              .DiscussionListItem-info {
+                  color: @muted-light;
+              }
+              .DiscussionListItem-count {
+                  color: @muted-light;
+                  background: transparent;
+              }
+              .DiscussionListItem-title mark {
+                  background: #FFE300;
+              }
+          }
+          .Scrubber {
+              background: @hs-20-15;
+          }
+          @media @phone {
+              .ModalManager:before {
+                  background: @hs-30-15;
+                  border-bottom: 1px solid @hs-30-25;
+              }
+              .ComposerBody-header>li {
+                  border-bottom: 1px solid @hs-30-25;
+              }
+              .item-terminalPost>div {
+                  margin-top: 4px;
+              }
+              .DiscussionListItem-content {
+                  &:active {
+                      background: inherit;
+                  }
+              }
+              .DiscussionList .DiscussionListItem-count {
+                  background: @hs-20-25;
+                  color: @muted-light;
+              }
+              .Scrubber {
+                  background: none;
+              }
+          }
+          @media (max-width:991px) and (min-width:768px) {
+              .sideNav:after {
+                  border-bottom: 1px solid @muted-light;
+              }
+          }
+          @media (min-width:768px) {
+              .sideNav .Dropdown--select .Dropdown-menu>li {
+                  &.active>a, >:hover {
+                      color: #fff;
+                  }
+              }
+          }
+          .Post-body {
+              color: @muted-light;
+              background: @hs-20-20;
+              border: 1px solid @hs-20-25;
+              &:before {
+                  border-right-color: @hs-20-25;
+              }
+              &:after {
+                  border-right-color: @hs-20-20;
+              }
+          }
+          ::-webkit-scrollbar {
+              width: 3px;
+              height: 3px;
+          }
+          ::-webkit-scrollbar-button {
+              background-color: #666;
+          }
+          ::-webkit-scrollbar-track {
+              background-color: #999;
+          }
+          ::-webkit-scrollbar-track-piece {
+              background-color: #fff;
+          }
+          ::-webkit-scrollbar-thumb {
+              height: 50px;
+              background-color: #666;
+              border-radius: 3px;
+          }
+          ::-webkit-scrollbar-corner {
+              background-color: #999;
+          }
+          ::-webkit-resizer {
+              background-color: #666;
+          }
+      }
+  }
