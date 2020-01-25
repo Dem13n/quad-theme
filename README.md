@@ -1,12 +1,12 @@
 # Quad theme
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 
 Compatible with default dark mode and Night Mode by FriendsOfFlarum
 
 Fixed width in two-panel mode
 
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 A [Flarum](http://flarum.org) extension. Quad theme
 
