@@ -2,7 +2,6 @@
 @font-family-2: 'Font Awesome 5 Free';
 @border-right-color-1: hsl(@primary-hue, min(100%, @primary-sat), 92%);
 @border-right-color-2: hsl(@primary-hue, min(100%, @primary-sat), 97%);
-
 .border-trans {
     border: 3px solid;
     border-image: radial-gradient(transparent, fade(@primary-color, 20%));
@@ -23,7 +22,6 @@
     border-image: radial-gradient(transparent, green);
     border-image-slice: 0 0 0 1;
 }
-
 .Post .Post-body img.inline-image {
     max-height: none;
     max-width: none;
@@ -279,7 +277,8 @@ a.UserMention {
 }
 @media (min-width: 768px) {
     .DiscussionPage-list {
-        overflow: visible;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .DiscussionPage-stream {
         margin-right: 170px;
