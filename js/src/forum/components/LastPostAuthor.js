@@ -15,7 +15,7 @@ export default class LastPostAuthor extends Component {
             <div class="LastPostAuthor">
                 {app.pane.active || innerWidth <= 767 ? '' : avatar(user, { className: 'Avatar--mini' })} {username(user)}
                 <span className="lpa">
-                    {app.translator.trans('dem13n.forum.discussionlist.ago', { ago: humanTime(time) })}
+                     { humanTime(time) }
                 </span>
             </div>
         );

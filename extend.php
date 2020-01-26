@@ -21,8 +21,6 @@ return [
         ->css(__DIR__ . '/resources/less/custom.less')
         ->css(__DIR__ . '/resources/less/fix.less'),
 
-    new Extend\Locales(__DIR__ . '/resources/locale'),
-
     function (Dispatcher $events) {
         $events->listen(Serializing::class, Listener\ApiAttributes::class);
     },
