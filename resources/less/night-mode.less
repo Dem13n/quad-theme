@@ -13,7 +13,27 @@
   @mix-black-100: mix(#000, @primary-color, 100%);
   @mix-black-90: mix(#000, @primary-color, 90%);
   body {
-       &.dark, &.night-mode {
+      &.dark, &.night-mode {
+          .border-trans {
+              border: 3px solid;
+              border-image: radial-gradient(transparent, @hs-30-25);
+              border-image-slice: 0 0 0 1;
+          }
+          .border-orange {
+              border: 3px solid;
+              border-image: radial-gradient(transparent, gold);
+              border-image-slice: 0 0 0 1;
+          }
+          .border-red {
+              border: 3px solid;
+              border-image: radial-gradient(transparent, orangered);
+              border-image-slice: 0 0 0 1;
+          }
+          .border-green {
+              border: 3px solid;
+              border-image: radial-gradient(transparent, limegreen);
+              border-image-slice: 0 0 0 1;
+          }
           background: @hs-20-10;
           .is-outer {
               -webkit-box-shadow: 0px 0px 10px @mix-black-100;

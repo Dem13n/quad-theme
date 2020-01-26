@@ -1,0 +1,6 @@
+dem13n:
+  admin:
+    quad_theme:
+      title: Настройки Quad Theme
+      fod: Индикатор свежести дискуссий
+      submit_button: => core.ref.save_changes

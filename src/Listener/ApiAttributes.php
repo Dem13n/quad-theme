@@ -20,6 +20,7 @@ class ApiAttributes
     {
         if ($event->isSerializer(ForumSerializer::class)) {
             $event->attributes['darkMode'] = $this->settings->get('theme_dark_mode');
+            $event->attributes['Fod'] = $this->settings->get('dem13n_fod');
         }
     }
 }

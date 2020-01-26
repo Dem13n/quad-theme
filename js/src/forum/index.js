@@ -5,6 +5,7 @@ import Page from 'flarum/components/Page';
 import Composer from 'flarum/components/Composer';
 import DiscussionListItem from 'flarum/components/DiscussionListItem';
 import LastPostAuthor from './components/LastPostAuthor';
+import FreshnessOfDiscussion from './tweaks/FreshnessOfDiscussion';
 
 app.initializers.add('dem13n-quad-theme', app => {
     extend(Page.prototype, 'init', function () {
@@ -13,6 +14,8 @@ app.initializers.add('dem13n-quad-theme', app => {
         }
         $('#app').addClass("is-outer wrapper affix");
     });
+
+    FreshnessOfDiscussion();
 
     extend(DiscussionListItem.prototype, 'infoItems', function (items) {
         const showFirstPost = ['newest', 'oldest'].indexOf(this.props.params.sort) !== -1;
