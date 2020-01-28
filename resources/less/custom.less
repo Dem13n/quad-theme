@@ -93,6 +93,10 @@ body {
 .Post--flagged {
     margin-right: 0;
 }
+span.lpa:before {
+    content: "•";
+    margin: 6px;
+}
 .Post-body {
     font-size: 16px;
     position: relative;
@@ -199,10 +203,6 @@ a.UserMention {
 @media (max-width: 767px) {
     body {
         font-size: 13px;
-    }
-    span.lpa:before {
-        content: "•";
-        margin: 4px;
     }
     .Post-body {
         padding: 10px;
@@ -416,13 +416,9 @@ a.UserMention {
             .username {
                 font-weight: bold;
                 position: absolute;
-                right: 173px;
+                right: 183px;
                 top: 38px;
                 font-size: 12px;
-                &:after {
-                    content: "•";
-                    margin-left: 7px;
-                }
             }
             >.item-tags {
                 top: 30px;
@@ -445,7 +441,7 @@ a.UserMention {
         }
         span.lpa {
             position: absolute;
-            right: -135px;
+            right: -117px;
             top: 38px;
             font-size: 12px;
             width: 300px;
