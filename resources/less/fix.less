@@ -3,11 +3,34 @@
     max-width: none;
     white-space: pre-line;
 }
-
 .PagesPage-list .container {
     max-width: none;
 }
-
 .PageList .PageList-results tbody tr {
     background-color: transparent;
+}
+// Byōbu
+.DiscussionListItem-info .RecipientLabel {
+    &.RecipientLabel {
+        background: @primary-color;
+        color: #fff;
+        border: none;
+    }
+    .username {
+        font-size: 12px;
+        position: initial;
+    }
+    @media @phone {
+        .username {
+            font-size: 11px;
+        }
+    }
+}
+.DiscussionHero .RecipientsLabel .RecipientLabel {
+    background: @primary-color;
+    color: #fff;
+    border: none;
+    .username {
+        font-size: 15px;
+    }
 }
