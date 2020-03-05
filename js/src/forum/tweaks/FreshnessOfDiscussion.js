@@ -26,6 +26,7 @@ export default function FreshnessOfDiscussion() {
     const minutesPassed = Math.floor((currentTime - lastPostedTime) / 60000);
 
     const newClass =
+    (minutesPassed < 0) ? attrs + ' border-blue' :
       (minutesPassed <= 20) ? attrs + ' border-red' :
         (minutesPassed > 20 && minutesPassed <= 180) ? attrs + ' border-orange' :
           (minutesPassed > 180 && minutesPassed <= 1440) ? attrs + ' border-green' : attrs + ' border-trans';
