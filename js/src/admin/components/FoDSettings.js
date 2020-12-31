@@ -2,12 +2,13 @@ import Modal from 'flarum/components/Modal';
 import Switch from 'flarum/components/Switch';
 import Button from 'flarum/components/Button';
 import saveSettings from 'flarum/utils/saveSettings';
+import Stream from 'flarum/utils/Stream';
 
 export default class FoDSettings extends Modal {
 
-  init() {
-    super.init();
-    this.Fod = m.prop(app.data.settings.dem13n_fod === '1');
+  oninit(vnode) {
+    super.oninit(vnode);
+    this.Fod = Stream(app.data.settings.dem13n_fod === '1');
   }
 
   className() {

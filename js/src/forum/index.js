@@ -8,7 +8,7 @@ import LastPostAuthor from './components/LastPostAuthor';
 import FreshnessOfDiscussion from './tweaks/FreshnessOfDiscussion';
 
 app.initializers.add('dem13n-quad-theme', app => {
-    extend(Page.prototype, 'init', function () {
+    extend(Page.prototype, 'oninit', function() {
         if (app.forum.attribute('darkMode') == 1) {
             $('body').addClass('night-mode');
         }
@@ -17,35 +17,35 @@ app.initializers.add('dem13n-quad-theme', app => {
 
     FreshnessOfDiscussion();
 
-    extend(DiscussionListItem.prototype, 'infoItems', function (items) {
-        const showFirstPost = ['newest', 'oldest'].indexOf(this.props.params.sort) !== -1;
+    extend(DiscussionListItem.prototype, 'infoItems', function(items) {
+        const showFirstPost = ['newest', 'oldest'].indexOf(this.attrs.params.sort) !== -1;
         items.replace('terminalPost',
             LastPostAuthor.component({
-                discussion: this.props.discussion,
+                discussion: this.attrs.discussion,
                 lastPost: !showFirstPost
             })
         );
     });
 
-    extend(Composer.prototype, 'show', function () {
+    extend(Composer.prototype, 'show', function() {
         $(".Post.ReplyPlaceholder").hide();
     });
 
-    extend(Composer.prototype, 'hide', function () {
+    extend(Composer.prototype, 'hide', function() {
         $(".Post.ReplyPlaceholder").show();
     });
 
     let pinned = localStorage.getItem('panePinned') === 'true';
 
-    extend(Pane.prototype, 'enable', function () {
+    extend(Pane.prototype, 'enable', function() {
         $('#app').toggleClass('wrapper', !pinned);
     });
 
-    extend(Pane.prototype, 'disable', function () {
+    extend(Pane.prototype, 'disable', function() {
         $('#app').addClass("wrapper");
     });
 
-    extend(Pane.prototype, 'togglePinned', function () {
+    extend(Pane.prototype, 'togglePinned', function() {
         pinned = !pinned;
         $('#app').toggleClass('wrapper', !pinned);
     });

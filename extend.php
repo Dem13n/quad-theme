@@ -18,6 +18,7 @@ return [
         ->js(__DIR__ . '/js/dist/admin.js')
         ->css(__DIR__ . '/resources/less/font.less')
         ->css(__DIR__ . '/resources/less/night-mode.less')
+        ->css(__DIR__ . '/resources/less/admin.less')
         ->css(__DIR__ . '/resources/less/custom.less')
         ->css(__DIR__ . '/resources/less/fix.less'),
 

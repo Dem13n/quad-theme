@@ -11,9 +11,9 @@ export default function FreshnessOfDiscussion() {
       return;
     }
 
-    const discussion = this.props.discussion;
-    const showFirstPost = ['newest', 'oldest'].indexOf(this.props.params.sort) !== -1;
-    const lastPost = this.props.lastPost && discussion.replyCount();
+    const discussion = this.attrs.discussion;
+    const showFirstPost = ['newest', 'oldest'].indexOf(this.attrs.params.sort) !== -1;
+    const lastPost = this.attrs.lastPost && discussion.replyCount();
     const lastPostedTime = discussion[(lastPost != showFirstPost) ? 'lastPostedAt' : 'createdAt']().getTime();
 
     const attrs = classList([

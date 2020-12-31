@@ -6,8 +6,8 @@ import username from 'flarum/helpers/username';
 export default class LastPostAuthor extends Component {
     view() {
 
-        const discussion = this.props.discussion;
-        const lastPost = this.props.lastPost && discussion.replyCount();
+        const discussion = this.attrs.discussion;
+        const lastPost = this.attrs.lastPost && discussion.replyCount();
         const user = discussion[lastPost ? 'lastPostedUser' : 'user']();
         const time = discussion[lastPost ? 'lastPostedAt' : 'createdAt']();
 
