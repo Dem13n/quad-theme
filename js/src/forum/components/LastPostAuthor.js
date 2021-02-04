@@ -14,11 +14,11 @@ export default class LastPostAuthor extends Component {
         let currentTime = new Date().getTime();
         let minutesPassed = Math.floor((currentTime - time.getTime()) / 60000);
 
-        const formatTime = (minutesPassed<0) ? <span style="color:deepskyblue" config={el => $(el).tooltip()} title={moment(time).endOf('day').fromNow()}>{moment(time).format('lll')}</span> : humanTime(time);
+        const formatTime = (minutesPassed<0) ? <span style="color:deepskyblue" config={el => $(el).tooltip()} title={dayjs(time).endOf('day').fromNow()}>{dayjs(time).format('lll')}</span> : humanTime(time);
 
         return (
             <div class="LastPostAuthor">
-                {app.pane.active || innerWidth <= 767 ? '' : avatar(user, { className: 'Avatar--mini' })} {username(user)}
+                {app.pane.active || innerWidth <= 767 ? '' : avatar(user, { className: 'Avatar--small' })} {username(user)}
                 <span className="lpa">
                      { formatTime }
                 </span>

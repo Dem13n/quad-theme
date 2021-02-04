@@ -9,9 +9,6 @@ import FreshnessOfDiscussion from './tweaks/FreshnessOfDiscussion';
 
 app.initializers.add('dem13n-quad-theme', app => {
     extend(Page.prototype, 'oninit', function() {
-        if (app.forum.attribute('darkMode') == 1) {
-            $('body').addClass('night-mode');
-        }
         $('#app').addClass("is-outer wrapper affix");
     });
 
