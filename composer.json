@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.15"
+        "flarum/core": ">=0.1.0-beta.16"
     },
     "autoload": {
         "psr-4": {
@@ -18,14 +18,12 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "0.1.x-dev"
-        },
         "flarum-extension": {
             "title": "Quad Theme",
+            "category": "theme",
             "icon": {
                 "name": "fas fa-dice-d6",
-                "backgroundColor": "#518BDA",
+                "backgroundColor": "#2B6205",
                 "color": "#fff"
             }
         }
